@@ -64,11 +64,17 @@ class PropertiesTable extends Migration
                 'constraint' => 9,
                 'unsigned' => true,
             ],
+            'type_id' => [
+                'type' => "INT",
+                'constraint' => 9,
+                'unsigned' => true,
+            ],
             'created_at' => [
                 'type' => "DATE",
             ]
         ]);
         $this->forge->addForeignKey('agent_id', 'agents', 'id', 'cascade', 'cascade');
+        $this->forge->addForeignKey('type_id', 'property_type', 'id', 'cascade', 'cascade');
         $this->forge->addPrimaryKey('id');
         $this->forge->createTable('properties');
     }
