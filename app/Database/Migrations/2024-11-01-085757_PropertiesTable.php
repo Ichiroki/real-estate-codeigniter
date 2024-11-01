@@ -64,10 +64,6 @@ class PropertiesTable extends Migration
                 'constraint' => 9,
                 'unsigned' => true,
             ],
-            'longitude' => [
-                'type' => "VARCHAR",
-                'constraint' => 255,
-            ],
             'created_at' => [
                 'type' => "DATE",
             ]
