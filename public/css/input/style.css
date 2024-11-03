@@ -4,6 +4,16 @@
     * {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
+
+    .banner {
+        @apply w-full h-screen;
+
+        background: #666 url('../../img/house/Banner.png') center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-blend-mode: multiply;
+    }
 }
 
 @tailwind components;

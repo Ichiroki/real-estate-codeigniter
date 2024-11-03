@@ -70,7 +70,7 @@ class Filters extends BaseFilters
     public array $globals = [
         'before' => [
             // 'honeypot',
-            // 'csrf',
+            'csrf',
             // 'invalidchars',
         ],
         'after' => [
@@ -92,7 +92,12 @@ class Filters extends BaseFilters
      *
      * @var array<string, list<string>>
      */
-    public array $methods = [];
+    public array $methods = [
+        'GET' => ['csrf'],
+        'POST' => ['csrf'],
+        'PUT' => ['csrf'],
+        'DELETE' => ['csrf'],
+    ];
 
     /**
      * List of filter aliases that should run on any
