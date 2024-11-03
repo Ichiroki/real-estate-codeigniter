@@ -11,5 +11,8 @@ class AgentController extends BaseController
     public function index()
     {
         $agents = new Agent();
+        $agents->findAll();
+
+        return view('');
     }
 }
