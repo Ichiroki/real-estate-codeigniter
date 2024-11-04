@@ -89,7 +89,7 @@ vendor/
 #-------------------------
 # NPM
 #-------------------------
-node_modules/
+node_modules
 
 #-------------------------
 # IDE / Development Files

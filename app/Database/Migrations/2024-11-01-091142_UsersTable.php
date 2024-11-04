@@ -30,7 +30,8 @@ class UsersTable extends Migration
             ],
             'role' => [
                 'type' => "VARCHAR",
-                'constraint' => 25
+                'constraint' => 25,
+                'default' => 1
             ],
             'created_at' => [
                 'type' => "DATE",
