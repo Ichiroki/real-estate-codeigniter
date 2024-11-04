@@ -8,7 +8,7 @@
   </head>
   <body class="text-slate-800 overflow-hidden">
     <nav class="flex flex-row-reverse lg:flex-row justify-between items-center px-7 py-3 shadow-lg fixed top-0 left-0 right-0 z-10 bg-slate-200">
-        <div class="flex flex-col gap-[.15rem] cursor-pointer" id="hamburger">
+        <div class="flex flex-col gap-[.15rem] w-1/3 cursor-pointer" id="hamburger">
             <div class="w-7 h-[.25rem] bg-slate-900"></div>
             <div class="w-7 h-[.25rem] bg-slate-900"></div>
             <div class="w-7 h-[.25rem] bg-slate-900"></div>
@@ -104,12 +104,27 @@
                 </a>
             </div>
         </div>
-        <a href="#" alt="logo" class="block">
-        <img src="<?= base_url('/img/logo/logo-real-estate.png') ?>" class="w-12 block"/>
+        <a href="#" alt="logo" class="flex items-center justify-center w-1/3">
+            <img src="<?= base_url('/img/logo/logo-real-estate.png') ?>" class="w-12 block"/>
         </a>
-        <a href="" class="hidden lg:block font-tahoma py-1 px-3 border-[#FFD806] border-2 rounded-full hover:bg-[#FFD806] hover:text-slate-100 transition-all">
-        Login
-        </a>
+        <div class="flex flex-col transition py-2 pl-5 w-1/3">
+            <button class="flex items-center w-full" id="login-dropdown">
+                <div class="flex justify-end items-center w-full ml-6">
+                    <p class="mr-4">Login</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chevron-down mr-6" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                    </svg>
+                </div>
+            </button>
+            <div id="login-list" class="hidden absolute top-12 right-12 flex-col bg-slate-100 lg:w-1/12 border-2 border-slate-500 shadow mt-3 rounded-xl overflow-hidden transition-all">
+                <a href="#" class="flex gap-5 pl-3 py-2 transition hover:bg-slate-300">
+                    <span>User</span>
+                </a>
+                <a href="#" class="flex gap-5 pl-3 py-2 transition hover:bg-slate-300">
+                    <span>Agent</span>
+                </a>
+            </div>
+        </div>
     </nav>
 
     <?= $this->renderSection('content'); ?>
